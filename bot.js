@@ -8,8 +8,8 @@ function clean(text) {
         return text;
 }
 
-const prefix = "#";
-const token = "NTE4NzUyOTcyNDYxODM0MjQx.DuVWUw.8pbfdajXrU2sBbp0epUtRErbQDU";
+const prefix = "s";
+const token = "NTE5MjA1MTIwMTE0OTUwMTU1.Dub8AQ.b2mRHnEZMdawr8wq2wcUhiFCUQA";
 
 client.on("ready", () => {
   console.log("Vulnix | Logged in! Server count: ${client.guilds.size}");
