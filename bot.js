@@ -8,12 +8,12 @@ function clean(text) {
         return text;
 }
 
-const prefix = "-";
-const token = "NTUyMDY4MzQxMDgzNDA2MzQ4.D16NaQ.Y_XDXoCtDazAhq-vsMgv30-XYcQ";
+const prefix = "X";
+const token = "NzA5MTM0ODEzMTAxMTYyNjM2.Xrhftg.-NIHMZmvknjCiLOVqfFsSZ_wUdE";
 
 client.on("ready", () => {
-  console.log("Rewards Ticket | Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`Support Magic |${prefix}new`);
+  console.log("");
+  client.user.setGame(`Exolved Ticket |${prefix}new`);
 });
 
 
@@ -36,10 +36,10 @@ client.on("message", (message) => {
 
 if (message.content.toLowerCase().startsWith(prefix + `new`)) {
     const reason = message.content.split(" ").slice(1).join(" ");
-    if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
+    if (!message.guild.roles.exists("name", "tickets")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
     if (message.guild.channels.exists("name", "ticket" + message.author.id)) return message.channel.send(`You already have a ticket open.`);
     message.guild.createChannel(`ticket-${message.author.id}`, "text").then(c => {
-        let role = message.guild.roles.find("name", "Support Team");
+        let role = message.guild.roles.find("name", "tickets");
         let role2 = message.guild.roles.find("name", "@everyone");
         c.overwritePermissions(role, {
             SEND_MESSAGES: true,
