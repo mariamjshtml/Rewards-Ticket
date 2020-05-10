@@ -9,7 +9,7 @@ function clean(text) {
 }
 
 const prefix = "X";
-const token = "NzA5MTM0ODEzMTAxMTYyNjM2.XrhggQ.07tw24x0JdDixOrGMzQ5NFBqJoQ";
+
 
 client.on("ready", () => {
   console.log("");
